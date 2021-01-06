@@ -2,6 +2,15 @@
   box-sizing: border-box;
 }
 
+:root {
+  --main-red-color: #e06262;
+}
+/* root merupakan fitur pada CSS untuk menyimpan variable */
+
+.main-red-color {
+  color: var(--main-red-color);
+}
+
 html {
   font-size: 10px;
 }
@@ -34,4 +43,35 @@ html {
 .frame {
   border: 1px solid #484848;
   height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  /* membuat child" dari frame dibagi menjadi kolom */
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  /* secara vertikal akan memulai dari paling atas */
+}
+
+.header-title {
+  flex: 1;
+  text-align: center;
+  font-family: "Homemade Apple", sans-serif;
+  font-size: 3.6rem;
+  text-transform: lowercase;
+  /* membuat semua text jadi huruf kecil */
+}
+
+.header-btn {
+  font-size: 1.8rem;
+  /* rem berarti 18px karena pada html tag kita menggunakan 10px
+  jika kita pakai 2 rem maka sebenarnya itu 20px karena 2x10px(yang ada di tag HTML) */
+  font-family: "Bungee", sans-serif;
+  padding: 24px;
+
+  background: unset;
+  /* menghilangkan background */
+  border: unset;
 }
